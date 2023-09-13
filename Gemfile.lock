@@ -69,9 +69,18 @@ GEM
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
     ansi (1.5.0)
+    autoprefixer-rails (10.4.15.0)
+      execjs (~> 2)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
+    bootstrap (4.0.0)
+      autoprefixer-rails (>= 6.0.3)
+      popper_js (>= 1.12.9, < 2)
+      sass (>= 3.5.2)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.2.4)
     capybara (3.39.2)
       addressable
@@ -90,6 +99,7 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     erubi (1.12.0)
+    execjs (2.9.0)
     ffi (1.15.5)
     formatador (1.1.0)
     globalid (1.2.1)
@@ -162,6 +172,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     pg (1.5.4)
+    popper_js (1.16.1)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -215,6 +226,13 @@ GEM
     rexml (3.2.6)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
+    sass (3.7.4)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     selenium-webdriver (4.12.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -256,6 +274,8 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  bootstrap
+  bootstrap-sass
   capybara
   debug
   guard

@@ -18,6 +18,8 @@ gem "puma", "~> 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
+
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
@@ -42,6 +44,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -58,6 +61,8 @@ group :development do
   gem "web-console"
   gem 'guard' # NOTE: this is necessary in newer versions
   gem 'guard-minitest'
+  gem 'bootstrap'
+  gem 'bootstrap-sass'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
