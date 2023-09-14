@@ -1,12 +1,8 @@
 class User < ApplicationRecord
-    attr_accessor :username, :password
+    before_save { self.username = username.downcase }
+    validates :username, presence: true, length: {maximum: 50}, uniqueness: { case_sensitive: false }
+    validates :password, presence: true, length: {minimum: 6}
 
-    def Initialize(attributes = {})
-        @username = attributes(:username)
-        @password = attributes(:password)
-    end
-    
-    def getUsername
-        "#{@username}"
-    end
+    has_secure_password
+    has_secure_password :recovery_password, validations: false
 end
