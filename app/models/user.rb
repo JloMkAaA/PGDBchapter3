@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_many :microposts, dependent: :destroy
     attr_accessor :remember_token
     before_save { self.username = username.downcase }
     validates :username, presence: true, length: {maximum: 50}, uniqueness: { case_sensitive: false }
@@ -12,6 +13,10 @@ class User < ApplicationRecord
         BCrypt::Engine::MIN_COST :           
         BCrypt::Engine.cost    
         BCrypt::Password.create(string, cost: cost)  
+    end
+
+    def feed    
+        Micropost.where("user_id = ?", id)  
     end
 
     def User.new_token
